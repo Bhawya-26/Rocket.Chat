@@ -500,6 +500,7 @@ jobs:
     secrets:
       CR_USER: ${{ secrets.CR_USER }}
       CR_PAT: ${{ secrets.CR_PAT }}
+      CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
 
   test-api-livechat:
     name: 🔨 Test API Livechat (CE)
@@ -516,6 +517,7 @@ jobs:
     secrets:
       CR_USER: ${{ secrets.CR_USER }}
       CR_PAT: ${{ secrets.CR_PAT }}
+      CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
 
   test-ui:
     name: 🔨 Test UI (CE)
@@ -541,6 +543,7 @@ jobs:
       REPORTER_ROCKETCHAT_API_KEY: ${{ secrets.REPORTER_ROCKETCHAT_API_KEY }}
       REPORTER_ROCKETCHAT_URL: ${{ secrets.REPORTER_ROCKETCHAT_URL }}
       REPORTER_JIRA_ROCKETCHAT_API_KEY: ${{ secrets.REPORTER_JIRA_ROCKETCHAT_API_KEY }}
+      CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
 
   test-api-ee:
     name: 🔨 Test API (EE)
@@ -561,6 +564,7 @@ jobs:
     secrets:
       CR_USER: ${{ secrets.CR_USER }}
       CR_PAT: ${{ secrets.CR_PAT }}
+      CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
 
   test-api-livechat-ee:
     name: 🔨 Test API Livechat (EE)
@@ -581,6 +585,7 @@ jobs:
     secrets:
       CR_USER: ${{ secrets.CR_USER }}
       CR_PAT: ${{ secrets.CR_PAT }}
+      CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
 
   test-ui-ee:
     name: 🔨 Test UI (EE)
@@ -609,6 +614,7 @@ jobs:
       REPORTER_ROCKETCHAT_URL: ${{ secrets.REPORTER_ROCKETCHAT_URL }}
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       REPORTER_JIRA_ROCKETCHAT_API_KEY: ${{ secrets.REPORTER_JIRA_ROCKETCHAT_API_KEY }}
+      CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
 
   test-federation-matrix:
     name: 🔨 Test Federation Matrix
