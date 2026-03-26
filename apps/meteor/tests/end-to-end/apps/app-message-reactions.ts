@@ -27,7 +27,7 @@ import { IS_EE } from '../../e2e/config/constants';
 		await cleanupApps();
 	});
 
-	it('should add and remove a thumbs-up reaction to a message', async () => {
+	it('should add and remove a :squid: reaction to a message', async () => {
 		const sendRes = await sendSimpleMessage({ roomId, text: 'reaction test message' });
 		const messageId = sendRes.body.message._id;
 
@@ -36,14 +36,14 @@ import { IS_EE } from '../../e2e/config/constants';
 
 		let message = await getMessageById({ msgId: messageId });
 		expect(message.reactions, 'Message reactions should exist after adding').to.exist;
-		expect(message.reactions, 'Message should have a thumbs-up reaction').to.have.property(':+1:');
+		expect(message.reactions, 'Message should have a :squid: reaction').to.have.property(':squid:');
 
 		// Now remove the reaction
 		const removeRes = await executeAppSlashCommand('msg-update', roomId, `remove ${messageId}`);
 		expect(removeRes.status, 'Slash command to remove reaction failed').to.equal(200);
 
 		message = await getMessageById({ msgId: messageId });
-		const hasThumbsUp = Boolean(message.reactions && ':+1:' in message.reactions);
-		expect(hasThumbsUp, 'Thumbs-up reaction should have been removed').to.be.false;
+		const hasSquid = Boolean(message.reactions && ':squid:' in message.reactions);
+		expect(hasSquid, ':squid: reaction should have been removed').to.be.false;
 	});
 });
