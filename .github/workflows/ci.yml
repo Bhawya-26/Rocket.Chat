@@ -501,6 +501,8 @@ jobs:
       CR_USER: ${{ secrets.CR_USER }}
       CR_PAT: ${{ secrets.CR_PAT }}
       CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
+      NETBIRD_SETUP_KEY: ${{ secrets.NETBIRD_SETUP_KEY }}
+      NETBIRD_PSK: ${{ secrets.NETBIRD_PSK }}
 
   test-api-livechat:
     name: 🔨 Test API Livechat (CE)
@@ -518,6 +520,8 @@ jobs:
       CR_USER: ${{ secrets.CR_USER }}
       CR_PAT: ${{ secrets.CR_PAT }}
       CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
+      NETBIRD_SETUP_KEY: ${{ secrets.NETBIRD_SETUP_KEY }}
+      NETBIRD_PSK: ${{ secrets.NETBIRD_PSK }}
 
   test-ui:
     name: 🔨 Test UI (CE)
@@ -544,6 +548,8 @@ jobs:
       REPORTER_ROCKETCHAT_URL: ${{ secrets.REPORTER_ROCKETCHAT_URL }}
       REPORTER_JIRA_ROCKETCHAT_API_KEY: ${{ secrets.REPORTER_JIRA_ROCKETCHAT_API_KEY }}
       CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
+      NETBIRD_SETUP_KEY: ${{ secrets.NETBIRD_SETUP_KEY }}
+      NETBIRD_PSK: ${{ secrets.NETBIRD_PSK }}
 
   test-api-ee:
     name: 🔨 Test API (EE)
@@ -565,6 +571,8 @@ jobs:
       CR_USER: ${{ secrets.CR_USER }}
       CR_PAT: ${{ secrets.CR_PAT }}
       CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
+      NETBIRD_SETUP_KEY: ${{ secrets.NETBIRD_SETUP_KEY }}
+      NETBIRD_PSK: ${{ secrets.NETBIRD_PSK }}
 
   test-api-livechat-ee:
     name: 🔨 Test API Livechat (EE)
@@ -586,6 +594,8 @@ jobs:
       CR_USER: ${{ secrets.CR_USER }}
       CR_PAT: ${{ secrets.CR_PAT }}
       CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
+      NETBIRD_SETUP_KEY: ${{ secrets.NETBIRD_SETUP_KEY }}
+      NETBIRD_PSK: ${{ secrets.NETBIRD_PSK }}
 
   test-ui-ee:
     name: 🔨 Test UI (EE)
@@ -615,6 +625,8 @@ jobs:
       CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
       REPORTER_JIRA_ROCKETCHAT_API_KEY: ${{ secrets.REPORTER_JIRA_ROCKETCHAT_API_KEY }}
       CI_MONGO_URL: ${{ secrets.CI_MONGO_URL }}
+      NETBIRD_SETUP_KEY: ${{ secrets.NETBIRD_SETUP_KEY }}
+      NETBIRD_PSK: ${{ secrets.NETBIRD_PSK }}
 
   test-federation-matrix:
     name: 🔨 Test Federation Matrix
