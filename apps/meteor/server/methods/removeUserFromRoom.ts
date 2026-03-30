@@ -116,12 +116,10 @@ export const removeUserFromRoomMethod = async (fromId: string, data: { rid: stri
 		await Rooms.removeUsersFromE2EEQueueByRoomId(room._id, [removedUser._id]);
 	}
 
-	setImmediate(() => {
-		void afterRemoveFromRoomCallback.run({ removedUser, userWhoRemoved: fromUser }, room);
-		void notifyOnRoomChanged(room);
-	});
-
 	await Apps.self?.triggerEvent(AppEvents.IPostRoomUserLeave, room, removedUser, fromUser);
+
+	await afterRemoveFromRoomCallback.run({ removedUser, userWhoRemoved: fromUser }, room);
+	void notifyOnRoomChanged(room);
 
 	return true;
 };
